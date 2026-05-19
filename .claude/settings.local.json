@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\UnrealProjects\\\\GPSProject\\\\Content\" -Directory)",
+      "Bash(Select-Object -ExpandProperty Name)",
+      "Bash(Select-Object Name)",
+      "Bash(Sort-Object Name)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\UnrealProjects\\\\GPSProject\\\\Content\" | ForEach-Object { $_.Name })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\UnrealProjects\\\\GPSProject\\\\Content\\\\Dialog\" -Recurse | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\UnrealProjects\\\\GPSProject\\\\Content\\\\\", \"\"\\) })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\UnrealProjects\\\\GPSProject\\\\Content\\\\CombatSystem\" -Recurse | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\UnrealProjects\\\\GPSProject\\\\Content\\\\\", \"\"\\) })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\UnrealProjects\\\\GPSProject\\\\Content\\\\All_Character\" -Recurse | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\UnrealProjects\\\\GPSProject\\\\Content\\\\\", \"\"\\) })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\UnrealProjects\\\\GPSProject\\\\Content\\\\Inventory\" -Recurse | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\UnrealProjects\\\\GPSProject\\\\Content\\\\\", \"\"\\) })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\UnrealProjects\\\\GPSProject\\\\Content\" -Recurse | Where-Object { $_.FullName -match '[Pp]uzzle' } | Select-Object FullName)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\UnrealProjects\\\\GPSProject\\\\Content\\\\Puzzle01\" -Recurse | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\UnrealProjects\\\\GPSProject\\\\Content\\\\Puzzle01\\\\\", \"\"\\) })",
+      "PowerShell(Get-ChildItem \"C:\\\\UnrealProjects\\\\GPSProject\\\\Content\\\\Puzzle01\" -Recurse | ForEach-Object { $_.FullName })",
+      "PowerShell(Get-ChildItem \"C:\\\\UnrealProjects\\\\GPSProject\\\\Content\\\\Puzzle01\" -Recurse -Force | Where-Object { -not $_.PSIsContainer } | ForEach-Object { $_.Name })",
+      "PowerShell(cmd /c \"dir /s /b C:\\\\UnrealProjects\\\\GPSProject\\\\Content\\\\Puzzle01\")",
+      "Bash(python3)",
+      "PowerShell(try { Get-ChildItem \"C:\\\\\" -Directory -ErrorAction Stop | Select-Object -ExpandProperty Name } catch { \"Error: $_\" })",
+      "PowerShell(try { Get-ChildItem \"C:\\\\Program Files\" -Directory -ErrorAction Stop | Select-Object -ExpandProperty Name } catch { \"Error: $_\" })",
+      "Bash(\"C:\\\\Program Files\\\\Epic Games\\\\UE_5.7\\\\Engine\\\\Binaries\\\\Win64\\\\UnrealEditor-Cmd.exe\" \"C:\\\\UnrealProjects\\\\GPSProject\\\\GPSProject.uproject\" -run=pythonscript -script=\"C:\\\\Temp\\\\BPExport\\\\probe_nodes.py\" -unattended -nullrhi)",
+      "Bash(\"C:\\\\Program Files\\\\Epic Games\\\\UE_5.7\\\\Engine\\\\Binaries\\\\Win64\\\\UnrealEditor-Cmd.exe\" \"C:\\\\UnrealProjects\\\\GPSProject\\\\GPSProject.uproject\" -run=pythonscript -script=\"C:\\\\Temp\\\\BPExport\\\\check_sundial2.py\" -unattended -nullrhi)",
+      "Bash(\"C:\\\\Program Files\\\\Epic Games\\\\UE_5.7\\\\Engine\\\\Binaries\\\\Win64\\\\UnrealEditor-Cmd.exe\" \"C:\\\\UnrealProjects\\\\GPSProject\\\\GPSProject.uproject\" -run=pythonscript -script=\"C:\\\\Temp\\\\BPExport\\\\get_positions.py\" -unattended -nullrhi)",
+      "PowerShell(C:\\\\Python\\\\python.exe \"C:\\\\Temp\\\\BPExport\\\\parse_uasset.py\" 2>&1)",
+      "PowerShell(C:\\\\Python\\\\python.exe \"C:\\\\Temp\\\\BPExport\\\\debug_header.py\")",
+      "Bash(C:\\\\Python\\\\python.exe *)",
+      "PowerShell(python \"C:\\\\Temp\\\\BPExport\\\\parse2.py\" 2>&1)",
+      "PowerShell(python -c \"import sys; sys.stdout.reconfigure\\(encoding='utf-8'\\); print\\(sys.stdin.read\\(\\)\\)\")",
+      "PowerShell(python \"C:\\\\Temp\\\\BPExport\\\\find_offsets.py\" 2>&1)",
+      "PowerShell(python \"C:\\\\Temp\\\\BPExport\\\\map_header.py\" 2>&1)"
+    ]
+  }
+}
