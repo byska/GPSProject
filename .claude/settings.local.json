@@ -27,7 +27,11 @@
       "PowerShell(python \"C:\\\\Temp\\\\BPExport\\\\parse2.py\" 2>&1)",
       "PowerShell(python -c \"import sys; sys.stdout.reconfigure\\(encoding='utf-8'\\); print\\(sys.stdin.read\\(\\)\\)\")",
       "PowerShell(python \"C:\\\\Temp\\\\BPExport\\\\find_offsets.py\" 2>&1)",
-      "PowerShell(python \"C:\\\\Temp\\\\BPExport\\\\map_header.py\" 2>&1)"
+      "PowerShell(python \"C:\\\\Temp\\\\BPExport\\\\map_header.py\" 2>&1)",
+      "Bash(Get-ChildItem -Path \"C:\\\\UnrealProjects\\\\GPSProject\" -Directory)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\UnrealProjects\\\\GPSProject\" -Directory | Where-Object { $_.Name -like \"Config\" -or $_.Name -like \"Source\" } | Select-Object Name)",
+      "Bash(Get-ChildItem *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\UnrealProjects\\\\GPSProject\\\\Content\\\\All_Character\\\\MainCharacter\\\\\" -File | Select-Object Name, @{Name=\"Size\";Expression={$_.Length}} | Format-Table -AutoSize)"
     ]
   }
 }
